@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Funções</title>
+</head>
+<body>
+   <h1>Funções</h1>
+
+   <button onclick="adicionar()">+</button>
+   <button onclick="subtrair()">-</button>
+   <button onclick="multiplicar()">*</button>
+   <button onclick="dividir()">/</button>
+
+   
+   <div id="output" style="margin-top: 15px"></div>
+   
+
+   <script>
+
+      var n = prompt("Digite um número: ");
+      n = parseFloat (n);
+      output.innerHTML = n;
+
+
+      function  adicionar(){
+         var ad = prompt("Digite um número: ");
+         ad = parseFloat (ad);
+
+         mensagem = n + ad;
+         
+         output.innerHTML = mensagem;
+      }
+
+      function  subtrair(){
+         var sub = prompt("Digite um número: ");
+         sub = parseFloat (sub);
+
+         mensagem = n - sub;
+         
+         output.innerHTML = mensagem;
+      }
+
+      function  multiplicar(){
+         var mul = prompt("Digite um número: ");
+         mul = parseFloat (mul);
+
+         mensagem = n * mul;
+         
+         output.innerHTML = mensagem;
+      }
+
+      function  dividir(){
+         var div = prompt("Digite um número: ");
+         div = parseFloat (div);
+
+         mensagem = n / div;
+         
+         output.innerHTML = mensagem;
+      }
+   </script>
+</body>
+</html>
