@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Area</title>
+</head>
+<body>
+   <h1>Área mostrando erro</h1>
+
+   <button onclick="areaAlert()">Mostrar área Alert</button>
+   <button onclick="areaOutput()">Mostrar área Output</button>
+
+   <div id="output"></div>
+
+   <script>
+   
+      function areaAlert(){
+         var altura = prompt('Digite a altura: ');
+         altura = parseFloat(altura);
+
+         var largura = prompt('Digite a largura');
+         largura = parseFloat(largura);
+
+         try {
+            var area = calcularArea(altura, largura);
+         } catch(e){
+            area = e;
+         }
+
+         alert('A área é:' + area);
+      }
+
+      function areaOutput(){
+         
+         try{
+            var area = calcularArea(altura, largura);
+         } catch(e){
+            area = e;
+         }
+
+         document.querySelector('#output').innerHTML = 'A área é: ' + area;
+      }
+
+      areaAlert();
+ 
+      function calcularArea(a, l){
+
+         if (l === undefined || a === undefined){
+            throw new Error ('Precisa de dois números');
+         }
+
+         if ( isNaN(l) || isNaN(a) ){
+            throw new Error ('Somente números');
+         }
+
+         return a * l;
+      }
+   </script>
+</body>
+</html>

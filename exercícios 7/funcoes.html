@@ -44,7 +44,11 @@
       }
 
       function calcular(simbolo, n1, n2){
-         
+                 
+         if( isNaN(n1) || isNaN(n2)){
+            alert("Somente números")
+         }
+
          var numeroCalculado = null;
 
          switch(simbolo){
